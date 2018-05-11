@@ -3,6 +3,12 @@
 body {
     font-family: 'latoregular', sans-serif !important;
     color: #212529;
+    background: #e4e7ea;
+}
+
+h1 {
+    font-size: 36px;
+    color: #636e7b;
 }
 
 .btn-default {
@@ -34,4 +40,12 @@ body {
 
 .mb15 {
 	margin-bottom: 15px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+p.intro {
+    font-size: 13px;
 }

@@ -1,9 +1,15 @@
-<h1>Task list!</h1>
-
-<p>Add a new Task:</p>
-
+<h1 class="mt40">Play Hero Squad</h1>
+<p class="intro">Let's play Hero Squad. You can create your own heros / characters and after that, assign them to a squad. Remember a selected character / hero cannot be in two squads at the same time. Let's begin:</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+        Panel content
+    </div>
+    <div class="panel-footer">
+        Footer content goes here...
+    </div>
+</div>
 <form action="/tasks" method="post">
   	<label for="description">Task Description</label>
-  	<input id="description" name="description" type="text">
+  	<input class="form-control" id="description" name="description" type="text">
   	<button type="submit" class="btn btn-default">Add task</button>
 </form>
