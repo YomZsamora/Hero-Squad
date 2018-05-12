@@ -11,6 +11,14 @@ h1 {
     color: #636e7b;
 }
 
+h3 {
+    font-size: 24px;
+}
+
+.exist .heroes h3, .exist .squads h3 {
+    color: #1CAF9A;
+}
+
 .btn-default {
     background: #e4e7ea;
     color: #636e7b;
@@ -68,4 +76,23 @@ p.label {
 .exist-link a {
     font-size: 12px;
     color: #1CAF9A;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #e4e7ea;
+    margin-top: 50px;
+}
+.footer p {
+    font-size: 11px;
+    margin-bottom: 0px;
+    padding: 5px 0px 5px 0px;
+}
+
+.panel-header {
+    color: #1CAF9A;
+    font-size: 12px;
 }
