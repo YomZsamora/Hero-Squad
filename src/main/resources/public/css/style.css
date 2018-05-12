@@ -96,3 +96,34 @@ p.label {
     color: #1CAF9A;
     font-size: 12px;
 }
+
+.heroes ul, .squads ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.heroes ul li:first-child, .squads ul li:first-child {
+    border-top: 0;
+}
+.heroes ul li, .squads ul li {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+
+.heroes ul li small, .squads ul li small {
+    line-height: normal;
+}
+
+.heroes .hero-name, .squads .squad-name {
+    font-size: 13px;
+    color: #333;
+    margin: 0;
+    font-family: 'latobold';
+    line-height: normal;
+}
+
+.heroes ul li small, .squads ul li small {
+    line-height: normal;
+}

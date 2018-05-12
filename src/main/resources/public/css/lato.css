@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'latoblack';
-    src: url('/css/fonts/lato-black-webfont.woff2') format('woff2'),
-         url('/css/fonts/lato-black-webfont.woff') format('woff');
+    src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../fonts/lato-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'latoblack_italic';
-    src: url('/css/fonts/lato-blackitalic-webfont.woff2') format('woff2'),
-         url('/css/fonts/lato-blackitalic-webfont.woff') format('woff');
+    src: url('../fonts/lato-blackitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-blackitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -28,8 +28,8 @@
 
 @font-face {
     font-family: 'latobold';
-    src: url('/css/fonts/lato-bold-webfont.woff2') format('woff2'),
-         url('/css/fonts/lato-bold-webfont.woff') format('woff');
+    src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -40,8 +40,8 @@
 
 @font-face {
     font-family: 'latobold_italic';
-    src: url('/css/fonts/lato-bolditalic-webfont.woff2') format('woff2'),
-         url('/css/fonts/lato-bolditalic-webfont.woff') format('woff');
+    src: url('../fonts/lato-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bolditalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
