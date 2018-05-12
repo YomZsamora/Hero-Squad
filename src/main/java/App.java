@@ -18,22 +18,22 @@ public class App {
     	}, new VelocityTemplateEngine());
 
 
-    	post("/newHero", (request, response) -> {
-	  		Map<String, Object> model = new HashMap<String, Object>();
+    // 	post("/newHero", (request, response) -> {
+	  	// 	Map<String, Object> model = new HashMap<String, Object>();
 
-	  		ArrayList<Task> newHero = request.session().attribute("hero_squad");
-	  		if (newHero == null) {
-	  			newHero = new ArrayList<Task>();
-	  			request.session().attribute("newHero", newHero);
-	  		}
+	  	// 	ArrayList<Task> newHero = request.session().attribute("hero_squad");
+	  	// 	if (newHero == null) {
+	  	// 		newHero = new ArrayList<Task>();
+	  	// 		request.session().attribute("newHero", newHero);
+	  	// 	}
 
-	  		String description = request.queryParams("description");
-	  		Task newTask = new Task(description);
-	  		tasks.add(newTask);
+	  	// 	String description = request.queryParams("description");
+	  	// 	Task newTask = new Task(description);
+	  	// 	tasks.add(newTask);
 
-	  		model.put("template", "templates/success.vtl");
-	  		return new ModelAndView(model, layout);
-	  	}, new VelocityTemplateEngine());
+	  	// 	model.put("template", "templates/success.vtl");
+	  	// 	return new ModelAndView(model, layout);
+	  	// }, new VelocityTemplateEngine());
   	}
 
 
