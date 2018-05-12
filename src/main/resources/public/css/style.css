@@ -2,7 +2,7 @@
 
 body {
     font-family: 'latoregular', sans-serif !important;
-    color: #212529;
+    color: #333;
     background: #e4e7ea;
 }
 
@@ -46,6 +46,13 @@ h1 {
     margin-top: 40px;
 }
 
+.mb40 {
+    margin-bottom: 40px;
+}
+
 p.intro {
     font-size: 13px;
+}
+p.label {
+    color:333 !important;
 }

@@ -3,14 +3,28 @@
 <head>
     <title>Hero Squad</title>
     <link rel="icon" type="image/x-icon" href="/images/hero_squad.png">
-    <link rel='stylesheet' href='/css/bootstrap.css'>
+    <link rel='stylesheet' href='/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/css/bootstrap-override.css'>
     <link rel='stylesheet' href='/css/font-awesome.css'>
     <link rel='stylesheet' href='/css/lato.css'>
     <link rel='stylesheet' href='/css/style.css'>
+    <link rel='stylesheet' href='/css/jquery-ui-1.10.3.css'>
 </head>
 <body>
     <div class="container">
       	#parse( $template )
     </div>
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery-ui-1.10.3.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+    
+    "use strict"; 
+   
+  	// Spinner
+  	var spinner = jQuery('#spinner').spinner();
+  	spinner.spinner('value', 0);  
+	});
+</script>
 </body>
 </html>
