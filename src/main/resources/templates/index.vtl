@@ -4,29 +4,31 @@
 	<div class="col-md-4 exist">
 		<div class="panel panel-default heroes">
 	        <div class="panel-body">
-	        	<h3>Assign Heroes to Squad</h3>
-	        	<p>Assign Hero / Character to a Squad. Select existing hero you want to assign a squad to:</p>
-	        	<select class="form-control select2 mt15 mb15" data-placeholder="Select Hero / Character">
-                	<option label="- Select Hero / Character -"></option>
-	                <option value="">Hulk</option>
-	                <option value="">Spiderman</option>
-	                <option value="">Batman</option>
-	                <option value="">Martian Manhunter</option>
-	                <option value="">Iron Man</option>
-	                <option value="">Groot</option>
-	            </select>
-	            <p>Assign to this squad:</p>
-	        	<select class="form-control select2 mb15" data-placeholder="Select Hero / Character">
-                	<option label="- Select Hero / Character -"></option>
-	                <option value="">Secret Society</option>
-	                <option value="">Justice League</option>
-	                <option value="">Heroes 4 Hire</option>
-	                <option value="">Defenders</option>
-	                <option value="">New Avengers</option>
-	                <option value="">Outsiders</option>
-	                <option value="">Avengers</option>
-	            </select>
-	            <button class="btn btn-default btn-xs">Assign to Squad</button>
+	        	<form action="/assignToSquad" method="post">
+	        		<h3>Assign Heroes to Squad</h3>
+		        	<p>Assign Hero / Character to a Squad. Select existing hero you want to assign a squad to:</p>
+		        	<select class="form-control select2 mt15 mb15" data-placeholder="Select Hero / Character">
+	                	<option label="- Select Hero / Character -"></option>
+		                <option value="">Hulk</option>
+		                <option value="">Spiderman</option>
+		                <option value="">Batman</option>
+		                <option value="">Martian Manhunter</option>
+		                <option value="">Iron Man</option>
+		                <option value="">Groot</option>
+		            </select>
+		            <p>Assign to this squad:</p>
+		        	<select class="form-control select2 mb15" data-placeholder="Select Hero / Character">
+	                	<option label="- Select Hero / Character -"></option>
+		                <option value="">Secret Society</option>
+		                <option value="">Justice League</option>
+		                <option value="">Heroes 4 Hire</option>
+		                <option value="">Defenders</option>
+		                <option value="">New Avengers</option>
+		                <option value="">Outsiders</option>
+		                <option value="">Avengers</option>
+		            </select>
+		            <button class="btn btn-success btn-xs">Assign to Squad</button>
+	        	</form>		        	
 	        </div>
 	     </div>	
 	</div>
@@ -37,37 +39,39 @@
 	            <!-- <p class="exist-link mb0"><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
 		    </div>
 		    <div class="panel-footer">
-		        <input class="form-control mb15" type="text" placeholder="Enter Hero Name..." name="name" autocomplete="off">
-		        <p class="label">Enter Hero's Age:</p>
-		        <input class="form-control mb15" placeholder="Enter Hero's Age..." type="text" id="spinner" />
-		        <select class="form-control select2 mt15" data-placeholder="- Choose Special Ability -">
-                	<option label="- Choose Special Ability -"></option>
-	                <option value="">Superhuman Strength</option>
-	                <option value="">Camouflage</option>
-	                <option value="">Teleportation</option>
-	                <option value="">Genius-level Intellect</option>
-	                <option value="">Healing Factor</option>
-	                <option value="">Invulnerability</option>
-	                <option value="">Master Martial Artist</option>
-	                <option value="">Expert Tactician</option>
-	                <option value="">Flight</option>
-	                <option value="">Skilled Swordsman</option>
-	                <option value="">Shapeshifting</option>
-	                <option value="">Telekinesis</option>
-	                <option value="">Camouflage</option>
-	                <option value="">Telepathy</option>
-	                <option value="">Enhanced Senses</option>
-	                <option value="">Time Travel</option>
-	             </select>
-	             <select class="form-control select2 mt15" data-placeholder="Choose Weakness">
-                	<option label="- Choose Weakness -"></option>
-	                <option value="">Alcoholism</option>
-	                <option value="">Magic</option>
-	                <option value="">Self Control</option>
-	                <option value="">Ego</option>
-	                <option value="">Radiation</option>
-	                <option value="">Women</option>
-	             </select>
+		    	<form action="/newHero" method="post">
+		    		<input class="form-control mb15" type="text" placeholder="Enter Hero Name..." name="hero_name" autocomplete="off">
+			        <p class="label">Enter Hero's Age:</p>
+			        <input class="form-control mb15" name="hero_age" placeholder="Enter Hero's Age..." type="text" id="spinner" />
+			        <select class="form-control select2 mt15" name="hero_ability" data-placeholder="- Choose Special Ability -">
+	                	<option label="- Choose Special Ability -"></option>
+		                <option value="Superhuman Strength">Superhuman Strength</option>
+		                <option value="Camouflage">Camouflage</option>
+		                <option value="Teleportation">Teleportation</option>
+		                <option value="Genius-level Intellect">Genius-level Intellect</option>
+		                <option value="Healing Factor">Healing Factor</option>
+		                <option value="Invulnerability">Invulnerability</option>
+		                <option value="Master Martial Artist">Master Martial Artist</option>
+		                <option value="Expert Tactician">Expert Tactician</option>
+		                <option value="Flight">Flight</option>
+		                <option value="Skilled Swordsma">Skilled Swordsman</option>
+		                <option value="Shapeshifting">Shapeshifting</option>
+		                <option value="Telekinesis">Telekinesis</option>
+		                <option value="Telepathy">Telepathy</option>
+		                <option value="Enhanced Senses">Enhanced Senses</option>
+		                <option value="Time Travel">Time Travel</option>
+		             </select>
+		             <select class="form-control select2 mt15 mb15" name="hero_weakness" data-placeholder="Choose Weakness">
+	                	<option label="- Choose Weakness -"></option>
+		                <option value="Alcoholism">Alcoholism</option>
+		                <option value="Magic">Magic</option>
+		                <option value="Self Control">Self Control</option>
+		                <option value="Ego">Ego</option>
+		                <option value="Radiation">Radiation</option>
+		                <option value="Women">Women</option>
+		             </select>
+		             <button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Character</button>
+		    	</form>			        
 		    </div>
 		</div>		
 	</div>
@@ -78,18 +82,21 @@
 	            <!-- <p class="exist-link mb0"><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
 		    </div>
 		    <div class="panel-footer">
-		        <input class="form-control mb15" type="text" placeholder="Enter Squad's Name..." name="name" autocomplete="off">
-		        <p class="label">Squad's Max Size:</p>
-		        <input class="form-control mb15" placeholder="Max Size..." type="text" id="spinner2" />
-             	<select class="form-control select2 mt15" data-placeholder="Squad's Cause">
-                	<option label="- Squad's Cause -"></option>
-	                <option value="">Track Hacker's</option>
-	                <option value="">Fight Sexism</option>
-	                <option value="">Black Lives Matter</option>
-	                <option value="">Democracy</option>
-	                <option value="">Fight Anti-Heroes</option>
-	                <option value="">Prevent Alien Invasion</option>
-	            </select>
+		    	<form action="/createSquad" method="post">
+		    		<input class="form-control mb15" type="text" placeholder="Enter Squad's Name..." name="name" autocomplete="off">
+			        <p class="label">Squad's Max Size:</p>
+			        <input class="form-control mb15" placeholder="Max Size..." type="text" id="spinner2" />
+	             	<select class="form-control select2 mt15 mb15" data-placeholder="Squad's Cause">
+	                	<option label="- Squad's Cause -"></option>
+		                <option value="">Track Hacker's</option>
+		                <option value="">Fight Sexism</option>
+		                <option value="">Black Lives Matter</option>
+		                <option value="">Democracy</option>
+		                <option value="">Fight Anti-Heroes</option>
+		                <option value="">Prevent Alien Invasion</option>
+		            </select>
+		            <button class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create Squad</button>
+		    	</form>			        
 		    </div>
 		</div>
 	</div>

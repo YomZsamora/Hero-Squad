@@ -79,6 +79,10 @@ p.label {
     color:333 !important;
 }
 
+.btn-xs {
+    padding: 2px 10px;
+}
+
 .exist-link a {
     font-size: 12px;
     color: #1CAF9A;
