@@ -1,6 +1,35 @@
 <h1 class="mt40">Play Hero Squad</h1>
 <p class="intro">Let's play Hero Squad. You can create your own heros / characters and after that, assign them to a squad. Remember a selected character / hero cannot be in two squads at the same time. Let's begin:</p>
 <div class="row mb40">
+	<div class="col-md-4 exist">
+		<div class="panel panel-default heroes">
+	        <div class="panel-body">
+	        	<h3>Assign Heroes to Squad</h3>
+	        	<p>Assign Hero / Character to a Squad. Select existing hero you want to assign a squad to:</p>
+	        	<select class="form-control select2 mt15 mb15" data-placeholder="Select Hero / Character">
+                	<option label="- Select Hero / Character -"></option>
+	                <option value="">Hulk</option>
+	                <option value="">Spiderman</option>
+	                <option value="">Batman</option>
+	                <option value="">Martian Manhunter</option>
+	                <option value="">Iron Man</option>
+	                <option value="">Groot</option>
+	            </select>
+	            <p>Assign to this squad:</p>
+	        	<select class="form-control select2 mb15" data-placeholder="Select Hero / Character">
+                	<option label="- Select Hero / Character -"></option>
+	                <option value="">Secret Society</option>
+	                <option value="">Justice League</option>
+	                <option value="">Heroes 4 Hire</option>
+	                <option value="">Defenders</option>
+	                <option value="">New Avengers</option>
+	                <option value="">Outsiders</option>
+	                <option value="">Avengers</option>
+	            </select>
+	            <button class="btn btn-default btn-xs">Assign to Squad</button>
+	        </div>
+	     </div>	
+	</div>
 	<div class="col-md-4">
 		<div class="panel panel-default">
 		    <div class="panel-body panel-header">
@@ -37,9 +66,12 @@
 	                <option value="">Self Control</option>
 	                <option value="">Ego</option>
 	                <option value="">Radiation</option>
+	                <option value="">Women</option>
 	             </select>
 		    </div>
-		</div>
+		</div>		
+	</div>
+	<div class="col-md-4">		
 		<div class="panel panel-default">
 		    <div class="panel-body panel-header">
 		        <i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Create a <strong>NEW SQUAD</strong> for your Heroes Here.
@@ -59,36 +91,64 @@
 	                <option value="">Prevent Alien Invasion</option>
 	            </select>
 		    </div>
-		</div>		
+		</div>
 	</div>
-	<div class="col-md-8 exist">
-		<div class="panel panel-default heroes">
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default squads">
 	        <div class="panel-body">
-	        	<h3>Assign Heroes to Squad</h3>
-	        	<p>Assign Hero / Character to a Squad. Select existing hero you want to assign a squad to:</p>
-	        	<select class="form-control select2 mt15 mb15" data-placeholder="Select Hero / Character">
-                	<option label="- Select Hero / Character -"></option>
-	                <option value="">Hulk</option>
-	                <option value="">Spiderman</option>
-	                <option value="">Batman</option>
-	                <option value="">Martian Manhunter</option>
-	                <option value="">Iron Man</option>
-	                <option value="">Groot</option>
-	            </select>
-	            <p>Assign to this squad:</p>
-	        	<select class="form-control select2 mb15" data-placeholder="Select Hero / Character">
-                	<option label="- Select Hero / Character -"></option>
-	                <option value="">Secret Society</option>
-	                <option value="">Justice League</option>
-	                <option value="">Heroes 4 Hire</option>
-	                <option value="">Defenders</option>
-	                <option value="">New Avengers</option>
-	                <option value="">Outsiders</option>
-	                <option value="">Avengers</option>
-	            </select>
-	            <button class="btn btn-default btn-xs">Assign to Squad</button>
+	        	<h3>Existing Squads</h3>
+	        	<hr>
+	        	<ul>
+	        		<li class="mt10">
+	        			<small class="pull-right"><strong>Max Size: </strong>22</small>
+	        			<h4 class="squad-name">Avengers</h4>
+	        			<small>
+		        			<ul>
+		        				<li>Iron Man</li>
+		        				<li>Hulk</li>
+		        				<li>Thor</li>
+		        				<li>Captain America</li>
+		        				<li>Black Widow</li>
+		        				<li>Wanda Maximoff</li>
+		        				<li>Hawkeye</li>
+		        				<li>Vision</li>
+		        			</ul>	        				
+	        			</small>
+	        		</li>
+	        		<li class="mt10">
+	        			<small class="pull-right"><strong>Max Size: </strong>2</small>
+	        			<h4 class="squad-name">Heroes 4 Hire</h4>
+	        			<small>
+		        			<ul>
+		        				<li>Luke Cage</li>
+		        				<li>Iron Fist</li>
+		        			</ul>	        				
+	        			</small>
+	        		</li>
+	        		<li class="mt10">
+	        			<small class="pull-right"><strong>Max Size: </strong>9</small>
+	        			<h4 class="squad-name">Justice League</h4>
+	        			<small>
+		        			<ul>
+		        				<li>Batman</li>
+		        				<li>Wonder Woman</li>
+		        				<li>Martian Manhunter</li>
+		        				<li>Aquaman</li>
+		        				<li>Flash</li>
+		        				<li>Green Lantern</li>
+		        				<li>Shazam</li>
+		        				<li>Cyborg</li>
+		        				<li>Superman</li>
+		        			</ul>	        				
+	        			</small>
+	        		</li>
+	            </ul>
 	        </div>
 	     </div>
+	</div>
+	<div class="col-md-6">
 		<div class="panel panel-default heroes">
 	        <div class="panel-body">
 	        	<h3>Existing Heroes</h3>
@@ -110,40 +170,6 @@
 	        			<small><strong class="text-success">Special Ability: </strong>Expert Detective | <strong class="text-danger">Weakness: </strong>Women</small>
 	        		</li>
 	        	</ul>
-	        </div>
-	     </div>
-		<div class="panel panel-default squads">
-	        <div class="panel-body">
-	        	<h3>Existing Squads</h3>
-	        	<hr>
-	        	<ul>
-	        		<li>
-	        			<small class="pull-right"><strong>Max Size: </strong>15</small>
-	        			<h4 class="squad-name">Avengers</h4>
-	        			<small>
-		        			<ul>
-		        				<li>Iron Man</li>
-		        				<li>Hulk</li>
-		        				<li>Thor</li>
-		        				<li>Captain America</li>
-		        				<li>Black Widow</li>
-		        				<li>Wanda Maximoff</li>
-		        				<li>Hawkeye</li>
-		        				<li>Vision</li>
-		        			</ul>	        				
-	        			</small>
-	        		</li>
-	        		<li>
-	        			<small class="pull-right"><strong>Max Size: </strong>2</small>
-	        			<h4 class="squad-name">Heroes 4 Hire</h4>
-	        			<small><strong class="text-success">Special Ability: </strong>Unbreakable skin | <strong class="text-danger">Weakness: </strong>Radiation</small>
-	        		</li>
-	        		<li>
-	        			<small class="pull-right"><strong>Max Size: </strong>8</small>
-	        			<h4 class="squad-name">Justice League</h4>
-	        			<small><strong class="text-success">Special Ability: </strong>Expert Detective | <strong class="text-danger">Weakness: </strong>Women</small>
-	        		</li>
-	            </ul>
 	        </div>
 	     </div>
 	</div>
