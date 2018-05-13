@@ -17,23 +17,25 @@ public class App {
       		return new ModelAndView(model, layout);
     	}, new VelocityTemplateEngine());
 
+    	post("/newHero", (request, response) -> {
+    		Map<String, Object> model = new HashMap<String, Object>();
 
-    // 	post("/newHero", (request, response) -> {
-	  	// 	Map<String, Object> model = new HashMap<String, Object>();
+		    ArrayList<Hero> heroes = request.session().attribute("hero_squad");
+		    if (heroes == null) {
+		      	heroes = new ArrayList<Hero>();
+		      	request.session().attribute("hero_squad", heroes);
+		    }
 
-	  	// 	ArrayList<Task> newHero = request.session().attribute("hero_squad");
-	  	// 	if (newHero == null) {
-	  	// 		newHero = new ArrayList<Task>();
-	  	// 		request.session().attribute("newHero", newHero);
-	  	// 	}
+    		String heroName = request.queryParams("hero_name");
+    		String heroAge = request.queryParams("hero_age");
+    		String heroAbility = request.queryParams("hero_ability");
+    		String heroWeakness = request.queryParams("hero_weakness");
+    		Hero newHero = new Hero(heroName,heroAge,heroAbility,heroWeakness);
+    		heroes.add(newHero);
 
-	  	// 	String description = request.queryParams("description");
-	  	// 	Task newTask = new Task(description);
-	  	// 	tasks.add(newTask);
-
-	  	// 	model.put("template", "templates/success.vtl");
-	  	// 	return new ModelAndView(model, layout);
-	  	// }, new VelocityTemplateEngine());
+    		model.put("template", "templates/hero_added.vtl");
+    		return new ModelAndView(model, layout);
+   		}, new VelocityTemplateEngine());
   	}
 
 

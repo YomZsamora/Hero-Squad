@@ -143,3 +143,7 @@ p.label {
 .heroes ul li small, .squads ul li small {
     line-height: normal;
 }
+
+.alert.alert-success {
+    font-size:20px;
+}

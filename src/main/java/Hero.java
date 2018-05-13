@@ -2,11 +2,11 @@ import java.util.*;
 
 public class Hero {
    private String heroName;
-   private int heroAge;
+   private String heroAge;
    private String heroAbility;
    private String heroWeakness;
 
-   public Hero(String hero_name, int hero_age, String ability, String weakness){
+   public Hero(String hero_name, String hero_age, String ability, String weakness){
       heroName = hero_name;
       heroAge = hero_age;
       heroAbility = ability;
@@ -17,7 +17,7 @@ public class Hero {
       return heroName;
    }
 
-   public int getAge(){
+   public String getAge(){
       return heroAge;
    }
 
