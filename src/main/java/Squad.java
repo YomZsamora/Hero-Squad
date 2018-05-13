@@ -3,12 +3,12 @@ import java.util.*;
 public class Squad {
    private List<Hero> squadMembers = new ArrayList<Hero>();
    private String squadName;
-   private String maxSize;
+   private int maxSize;
    private String squadCause;
 
    public Squad (String squad_name, String squad_size, String squad_cause){
       squadName = squad_name;
-      maxSize = squad_size;
+      maxSize = Integer.parseInt(squad_size);
       squad_cause = squad_cause;
    }
 
@@ -16,11 +16,11 @@ public class Squad {
       return squadMembers;
    }
 
-   // public String getSquadSize(){
-   //    return squadMembers.size();
-   // }
+   public int getSquadSize(){
+      return squadMembers.size();
+   }
 
-   public String getMaxSize(){
+   public int getMaxSize(){
       return maxSize;
    }
 
