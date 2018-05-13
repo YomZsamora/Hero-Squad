@@ -12,7 +12,7 @@ public class Squad {
       squad_cause = squad_cause;
    }
 
-   public List<Hero>  getSquadMembers(){
+   public List<Hero> getSquadMembers(){
       return squadMembers;
    }
 
