@@ -112,10 +112,11 @@
 	    </div>
 		<div class="panel panel-default squads">
 	        <div class="panel-body">
-	        	<h3>Existing Squads</h3>
+	        	<h3>Squads / Team Ups</h3>
 	        	<hr>
+	        	#if ($squad_hero)
 	        	<ul>
-	        		<li class="mt10">
+	        		<!-- <li class="mt10">
 	        			<small class="pull-right"><strong>Max Size: </strong>22</small>
 	        			<h4 class="squad-name">Avengers</h4>
 	        			<small>
@@ -157,8 +158,21 @@
 		        				<li>Superman</li>
 		        			</ul>	        				
 	        			</small>
+	        		</li> -->
+	        		#foreach ($squad in $squad_hero)
+	        		<li class="mt10">
+	        			<small class="pull-right"><strong>Max Size: </strong>$squad.getMaxSize()</small>
+	        			<h4 class="squad-name">$squad.getSquadName()</h4>
+	        			<small>
+		        			<ul>
+		        				<li>Luke Cage</li>
+		        				<li>Iron Fist</li>
+		        			</ul>	        				
+	        			</small>
 	        		</li>
+	        		#end
 	            </ul>
+	            #end
 	        </div>
 	    </div>
 	</div>
