@@ -7,14 +7,16 @@ public class Squad {
    private static List<Squad> instances = new ArrayList<Squad>();
    private int mId;
    private List<Hero> heroes;
+   private int currentSize;
 
    public Squad (String squad_name, String squad_size, String squad_cause){
       squadName = squad_name;
       maxSize = Integer.parseInt(squad_size);
-      squad_cause = squad_cause;
+      squadCause = squad_cause;
       instances.add(this);
       mId = instances.size();
       heroes = new ArrayList<Hero>();
+      currentSize = 0;
    }
 
    public int getMaxSize(){
@@ -49,7 +51,14 @@ public class Squad {
       return heroes;
    }
 
+   public int getCurrentSize(){
+      return currentSize;
+   }
+
    public void addHero(Hero newHero){
-      heroes.add(newHero);
+      if (currentSize < maxSize){
+         heroes.add(newHero);
+         currentSize++;
+      }   
    }
 }
