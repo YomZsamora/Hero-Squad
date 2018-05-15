@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6 squad-display">
+		<div class="panel panel-default mt40 mb5">
+			<div class="panel-heading text-center">
+				<div class="panel-btns">
+					<!-- <a href="" class="panel-close">&times;</a>
+					<a href="" class="minimize">&minus;</a> -->
+				</div>
+			<h1>$squadMembers.getSquadName()</h1>
+			</div><!-- panel-heading -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12 heroes">
+						<ul>
+							#foreach($members in $squadMembers.getHeroes())
+							<li>
+			        			<h4 class="hero-name">$members.getName() ($members.getAge() yrs)</h4>
+			        			<small><strong class="text-success">Special Ability: </strong>$members.getAbility() | <strong class="text-danger">Weakness: </strong>$members.getWeakness()</small>
+			        		</li>
+							#end
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<a href="/">Go Back Home</a></p>
+	</div>
+	<div class="col-md-3"></div>
+</div>
