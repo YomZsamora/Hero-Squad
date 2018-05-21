@@ -35,9 +35,9 @@ public class App {
     		String heroAbility = request.queryParams("hero_ability");
     		String heroWeakness = request.queryParams("hero_weakness");
     		String heroSquad = request.queryParams("hero_squad");
-         Squad newMember = Squad.find(Integer.parseInt(heroSquad));
+        Squad newMember = Squad.find(Integer.parseInt(heroSquad));
     		Hero newHero = new Hero(heroName,heroAge,heroAbility,heroWeakness,heroSquad);
-         newMember.addHero(newHero);
+        newMember.addHero(newHero);
 
         model.put("newMember", newMember);
     		model.put("template", "templates/hero_added.vtl");

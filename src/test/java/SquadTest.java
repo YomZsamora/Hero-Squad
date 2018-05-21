@@ -17,7 +17,7 @@ public class SquadTest {
 
    @Test
    public void Squad_instantiatesWithSquadMaxSize_int() {
-      Squad mySquad = new Squad("Avengers", "16", "Prevent Alien Invasion");
+      Squad mySquad = new Squad("Avengers", "17", "Prevent Alien Invasion");
       assertEquals(16, mySquad.getMaxSize());
    }
 

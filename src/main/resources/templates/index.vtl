@@ -1,4 +1,4 @@
-<h1 class="mt40">Play Hero Squad</h1>
+<h1 class="mt40"></h1>
 <p class="intro">Let's play Hero Squad. You can create your own heros / characters and after that, assign them to a squad. Remember a selected character / hero cannot be in two squads at the same time. Let's begin:</p>
 <div class="row mb40">
 	<div class="col-md-4">		
@@ -8,11 +8,11 @@
 	            <!-- <p class="exist-link mb0"><a href="" data-toggle="modal" data-target=".bs-example-modal-panel"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
 		    </div>
 		    <div class="panel-footer">
-		    	<form action="/createSquad" method="post">
-		    		<input class="form-control mb15" type="text" placeholder="Enter Squad's Name..." name="squad_name" autocomplete="off">
-			        <p class="label">Squad's Max Size:</p>
-			        <input class="form-control mb15" placeholder="Max Size..." name="squad_size" type="text" id="spinner2" />
-	             	<select class="form-control select2 mt15 mb15" data-placeholder="Squad's Cause" name="squad_cause">
+		    	<form action="/createSquad" method="post" name="squadForm">
+		    		<input class="form-control mb0" type="text" placeholder="Enter Squad's Name..." name="squad_name" autocomplete="off">
+			        <br><p class="label">Squad's Max Size:</p>
+			        <input class="form-control mb0" type="number" placeholder="Max Size..." name="squad_size" type="text" />
+	             	<select class="form-control select2 mt15 mb0" data-placeholder="Squad's Cause" name="squad_cause">
 	                	<option label="- Squad's Cause / Motive -"></option>
 		                <option value="Track Hacker's">Track Hacker's</option>
 		                <option value="Prevent Alien Invasion">Prevent Alien Invasion</option>
@@ -24,7 +24,7 @@
 		                <option value="Fight Anti-Heroes">Fight Anti-Heroes</option>
 		                <option value="Live Fast, Die Young">Live Fast, Die Young</option>
 		            </select>
-		            <button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create Squad</button>
+		            <br><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create Squad</button>
 		    	</form>			        
 		    </div>
 		</div>
@@ -34,11 +34,11 @@
 	            <!-- <p class="exist-link mb0"><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
 		    </div>
 		    <div class="panel-footer">
-		    	<form action="/newHero" method="post">
-		    		<input class="form-control mb15" type="text" placeholder="Enter Hero Name..." name="hero_name" autocomplete="off">
-			        <p class="label">Enter Hero's Age:</p>
-			        <input class="form-control mb15" name="hero_age" placeholder="Enter Hero's Age..." type="number" id="spinner" />
-			        <select class="form-control select2 mt15" name="hero_ability" data-placeholder="- Choose Special Ability -">
+		    	<form action="/newHero" method="post" name="heroForm">
+		    		<input class="form-control mb0" type="text" placeholder="Enter Hero Name..." name="hero_name" autocomplete="off">
+			        <br><p class="label">Enter Hero's Age:</p>
+			        <input class="form-control mb0" name="hero_age" placeholder="Enter Hero's Age..." type="number" />
+			        <select class="form-control select2 mt15 mb0" name="hero_ability" data-placeholder="- Choose Special Ability -">
 	                	<option label="- Choose Special Ability -"></option>
 		                <option value="Superhuman Strength">Superhuman Strength</option>
 		                <option value="Camouflage">Camouflage</option>
@@ -52,11 +52,12 @@
 		                <option value="Skilled Swordsman">Skilled Swordsman</option>
 		                <option value="Shapeshifting">Shapeshifting</option>
 		                <option value="Telekinesis">Telekinesis</option>
+		                <option value="Energy Blasts">Energy Blasts</option>
 		                <option value="Telepathy">Telepathy</option>
 		                <option value="Enhanced Senses">Enhanced Senses</option>
 		                <option value="Time Travel">Time Travel</option>
 		            </select>
-		            <select class="form-control select2 mt15 mb15" name="hero_weakness" data-placeholder="Choose Weakness">
+		            <select class="form-control select2 mt15 mb0" name="hero_weakness" data-placeholder="Choose Weakness">
 	                	<option label="- Choose Weakness -"></option>
 		                <option value="Alcoholism">Alcoholism</option>
 		                <option value="Magic">Magic</option>
@@ -66,7 +67,7 @@
 		                <option value="Women">Women</option>
 		                <option value="Fire">Fire</option>
 		            </select>
-		            <select class="form-control select2 mt15 mb15" name="hero_squad" data-placeholder="Assign to Squad">
+		            <select class="form-control select2 mt15 mb0" name="hero_squad" data-placeholder="Assign to Squad">
 		            #if ($squad_hero)
 	                	<option label="- Assign to Squad -"></option>
 		             	#foreach ($squad in $squad_hero)
@@ -76,7 +77,7 @@
   						<option label="- No Squads Created -"></option>
 					#end    
 		            </select>
-		             <button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Character</button>
+		             <br><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Character</button>
 		    	</form>			        
 		    </div>
 		</div>		

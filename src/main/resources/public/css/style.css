@@ -74,10 +74,13 @@ h3 {
     margin-top: 40px;
 }
 
-
+label.error {
+    font-size: 11px;
+    color: red;
+}
 
 p.intro {
-    font-size: 13px;
+    font-size: 20px;
 }
 p.label {
     color:333 !important;
