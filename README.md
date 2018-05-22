@@ -17,7 +17,7 @@ A project that creates squads and assigns heroes to those squads depending on th
 - Run `gradle run` command.
 - Navigate to `http://localhost:4567/` in your browser.
 
-The site is hosted at Heroku. Visit [https://fierce-gorge-45867.herokuapp.com/](https://fierce-gorge-45867.herokuapp.com)
+The site is hosted at Heroku. Visit [https://fierce-gorge-45867.herokuapp.com](https://fierce-gorge-45867.herokuapp.com)
 
 ## Further help
 
