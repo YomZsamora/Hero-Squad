@@ -10,6 +10,11 @@ A project that creates squads and assigns heroes to those squads depending on th
 - JUnit
 - Velocity Template Engine
 
+##### Prerequisites
+
+- Basic Git knowledge, including an installed version of Git.
+- Your application must run on the OpenJDK version 6, 7 or 8.
+
 ##### Installation
 
 - Clone this repository to a location in your file system.
@@ -19,6 +24,4 @@ A project that creates squads and assigns heroes to those squads depending on th
 
 The site is hosted at Heroku. Visit [https://fierce-gorge-45867.herokuapp.com](https://fierce-gorge-45867.herokuapp.com)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
