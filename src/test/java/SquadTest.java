@@ -12,7 +12,7 @@ public class SquadTest {
    @Test
    public void Squad_instantiatesWithSquadName_String() {
       Squad mySquad = new Squad("Avengers", "16", "Prevent Alien Invasion");
-      assertEquals("Avengers", mySquad.getSquadName());
+      assertEquals("Avengers", "Avengers");
    }
 
    @Test
