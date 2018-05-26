@@ -34,6 +34,12 @@ public class HeroTest {
    }
 
    @Test
+   public void Hero_instantiatesWithHeroSquad_String() {
+      Hero myHero = new Hero("Spiderman", "16", "Enhanced Senses", "Magic", "New Avengers");
+      assertEquals("New Avengers", myHero.getSquad());
+   }
+
+   @Test
    public void all_returnsAllInstancesOfHero_true() {
       Hero firstHero = new Hero("Spiderman", "16", "Enhanced Senses", "Magic", "New Avengers");
       Hero secondHero = new Hero("Superman", "39", "Invulnerability", "Kryptonite", "Justice League");

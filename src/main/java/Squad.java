@@ -56,9 +56,7 @@ public class Squad {
    }
 
    public void addHero(Hero newHero){
-      if (currentSize < maxSize){
-         heroes.add(newHero);
-         currentSize++;
-      }   
+      heroes.add(newHero);
+      currentSize++;         
    }
 }
