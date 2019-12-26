@@ -56,37 +56,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-
-
-
-
-# Hero Squad
-An app that allows you to recruit a well-balanced team of superheroes (or any other character of your choosing).
-
-## Getting Started
-A project that creates squads and assigns heroes to those squads depending on their abilities and weaknesses. Each hero can only participate in one Squad at a time.
-
-##### Technologies Used
-- Java
-- Spark
-- JUnit
-- Velocity Template Engine
-
-##### Prerequisites
-
-- Basic Git knowledge, including an installed version of Git.
-- Your application must run on the OpenJDK version 6, 7 or 8.
-
-##### Installation
-
-- Clone this repository to a location in your file system.
-- Open terminal command line then navigate to the root folder of the application.
-- Run `gradle run` command.
-- Navigate to `http://localhost:4567/` in your browser.
-
-The site is hosted at Heroku. Visit [https://fierce-gorge-45867.herokuapp.com](https://fierce-gorge-45867.herokuapp.com)
-
-
