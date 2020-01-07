@@ -1,0 +1,124 @@
+<h1 class="mt40"></h1>
+<p class="intro">Let's play Hero Squad. You can create your own heros / characters and after that, assign them to a squad. Remember a selected character / hero cannot be in two squads at the same time. Let's begin:</p>
+<div class="row mb40">
+	<div class="col-md-4">		
+		<div class="panel panel-default">
+		    <div class="panel-body panel-header">
+		        <i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Create a <strong>NEW SQUAD</strong> for your Heroes Here.
+	            <!-- <p class="exist-link mb0"><a href="" data-toggle="modal" data-target=".bs-example-modal-panel"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
+		    </div>
+		    <div class="panel-footer">
+		    	<form action="/createSquad" method="post" name="squadForm">
+		    		<input class="form-control mb0" type="text" placeholder="Enter Squad's Name..." name="squad_name" autocomplete="off">
+			        <br><p class="label">Squad's Max Size:</p>
+			        <input class="form-control mb0" type="number" placeholder="Max Size..." name="squad_size" type="text" />
+	             	<select class="form-control select2 mt15 mb0" data-placeholder="Squad's Cause" name="squad_cause">
+	                	<option label="- Squad's Cause / Motive -"></option>
+		                <option value="Track Hacker's">Track Hacker's</option>
+		                <option value="Prevent Alien Invasion">Prevent Alien Invasion</option>
+		                <option value="Fight Sexism">Fight Sexism</option>
+		                <option value="Black Lives Matter">Black Lives Matter</option>
+		                <option value="Suicide">Suicide</option>
+		                <option value="Democracy">Democracy</option>
+		                <option value="Drive Fast">Drive Fast</option>
+		                <option value="Fight Anti-Heroes">Fight Anti-Heroes</option>
+		                <option value="Live Fast, Die Young">Live Fast, Die Young</option>
+		            </select>
+		            <br><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Create Squad</button>
+		    	</form>			        
+		    </div>
+		</div>
+		<div class="panel panel-default">
+		    <div class="panel-body panel-header">
+		        <i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add a <strong>NEW HERO</strong> Here and Specify His/Her Abilities.
+	            <!-- <p class="exist-link mb0"><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>&nbsp;&nbsp;View Existing Heroes</a></p> -->
+		    </div>
+		    <div class="panel-footer">
+		    	<form action="/newHero" method="post" name="heroForm">
+		    		<input class="form-control mb0" type="text" placeholder="Enter Hero Name..." name="hero_name" autocomplete="off">
+			        <br><p class="label">Enter Hero's Age:</p>
+			        <input class="form-control mb0" name="hero_age" placeholder="Enter Hero's Age..." type="number" />
+			        <select class="form-control select2 mt15 mb0" name="hero_ability" data-placeholder="- Choose Special Ability -">
+	                	<option label="- Choose Special Ability -"></option>
+		                <option value="Superhuman Strength">Superhuman Strength</option>
+		                <option value="Camouflage">Camouflage</option>
+		                <option value="Teleportation">Teleportation</option>
+		                <option value="Genius-level Intellect">Genius-level Intellect</option>
+		                <option value="Healing Factor">Healing Factor</option>
+		                <option value="Invulnerability">Invulnerability</option>
+		                <option value="Master Martial Artist">Master Martial Artist</option>
+		                <option value="Expert Tactician">Expert Tactician</option>
+		                <option value="Flight">Flight</option>
+		                <option value="Skilled Swordsman">Skilled Swordsman</option>
+		                <option value="Shapeshifting">Shapeshifting</option>
+		                <option value="Telekinesis">Telekinesis</option>
+		                <option value="Energy Blasts">Energy Blasts</option>
+		                <option value="Telepathy">Telepathy</option>
+		                <option value="Enhanced Senses">Enhanced Senses</option>
+		                <option value="Time Travel">Time Travel</option>
+		            </select>
+		            <select class="form-control select2 mt15 mb0" name="hero_weakness" data-placeholder="Choose Weakness">
+	                	<option label="- Choose Weakness -"></option>
+		                <option value="Alcoholism">Alcoholism</option>
+		                <option value="Magic">Magic</option>
+		                <option value="Self Control">Self Control</option>
+		                <option value="Ego">Ego</option>
+		                <option value="Radiation">Radiation</option>
+		                <option value="Women">Women</option>
+		                <option value="Fire">Fire</option>
+		            </select>
+		            <select class="form-control select2 mt15 mb0" name="hero_squad" data-placeholder="Assign to Squad">
+		            #if ($squad_hero)
+	                	<option label="- Assign to Squad -"></option>
+		             	#foreach ($squad in $squad_hero)
+		                <option value="$squad.getId()">$squad.getSquadName()</option>
+		                #end
+		            #else
+  						<option label="- No Squads Created -"></option>
+					#end    
+		            </select>
+		             <br><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Character</button>
+		    	</form>			        
+		    </div>
+		</div>		
+	</div>
+	<div class="col-md-8">
+		<div class="panel panel-default heroes">
+	        <div class="panel-body">
+	        	<h3>Heroes / Characters</h3>
+	        	<hr>
+	        	#if ($hero_squad)
+	        	<ul>
+	        		#foreach ($hero in $hero_squad)
+	        		<li>
+	        			<h4 class="hero-name">$hero.getName() ($hero.getAge() yrs)</h4>
+	        			<small><strong class="text-success">Special Ability: </strong>$hero.getAbility() | <strong class="text-danger">Weakness: </strong>$hero.getWeakness()</small>
+	        		</li>
+	        		#end
+	        	</ul>
+	        	#else
+	        		<span class="label label-warning">No Heroes Added Yet!</span>
+	        	#end
+	        </div>
+	    </div>
+		<div class="panel panel-default squads">
+	        <div class="panel-body">
+	        	<h3>Squads / Team Ups</h3>
+	        	<hr>
+	        	#if ($squad_hero)
+	        	<ul>
+	        		#foreach ($squad in $squad_hero)
+	        		<li class="mt10">
+	        			<small class="pull-right"><strong>Max Size: </strong>$squad.getMaxSize()</small>
+	        			<small class="pull-right"><strong>Current Size: </strong>$squad.getCurrentSize(), &nbsp;&nbsp;</small>
+	        			<h4 class="squad-name">$squad.getSquadName()</h4>
+	        			<small>Cause / Motive: <strong>$squad.getSquadCause()</strong></small><br>
+	        			<small><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<a href="/squad/$squad.getId()">View Squad Members</a></small>
+	        		</li>
+	        		#end
+	            </ul>
+	            #end
+	        </div>
+	    </div>
+	</div>
+</div>
